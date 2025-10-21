@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassPulse KSU - وكيل ذكي للقاعات الكبيرة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>
+                    <i class="fas fa-brain"></i>
+                    ClassPulse KSU - وكيل ذكي للقاعات الكبيرة
+                </h1>
+                <p class="subtitle">جامعة الملك سعود | كلية إدارة الأعمال</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span>عدد الطلاب: <strong id="total-students">150</strong></span>
+                    </div>
+                    <div class="stat-item success">
+                        <i class="fas fa-check-circle"></i>
+                        <span>متفاعلون: <strong id="normal-count">120</strong></span>
+                    </div>
+                    <div class="stat-item warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>تحذير: <strong id="warning-count">20</strong></span>
+                    </div>
+                    <div class="stat-item danger">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>عاجل: <strong id="urgent-count">10</strong></span>
+                    </div>
+                </div>
+                <button id="simulate-btn" class="simulate-btn">
+                    <i class="fas fa-play"></i>
+                    محاكاة محاضرة حية
+                </button>
+                <button id="reset-btn" class="reset-btn" style="display: none;">
+                    <i class="fas fa-redo"></i>
+                    إعادة تعيين
+                </button>
+                <div id="timer" class="timer" style="display: none;">
+                    <i class="fas fa-clock"></i>
+                    وقت المحاضرة: <strong id="time-display">0</strong> دقيقة
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <section class="students-section">
+                <h2>
+                    <i class="fas fa-th"></i>
+                    خريطة حرارية للطلاب (150 طالب)
+                </h2>
+                <div id="students-grid" class="students-grid"></div>
+            </section>
+
+            <aside class="alerts-section">
+                <h2>
+                    <i class="fas fa-bell"></i>
+                    تنبيهات فورية
+                </h2>
+                <div id="alerts-list" class="alerts-list"></div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
